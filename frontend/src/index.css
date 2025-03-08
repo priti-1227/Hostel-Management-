@@ -1,0 +1,27 @@
+body {
+  /* background: linear-gradient(45deg, #F2B600 0%, #003078 50%, #001623 100%); */
+  /* background: linear-gradient(135deg, #001623 0%, #003078 50%, #f2b600 100%); */
+
+  margin: 0;
+  /* height: 100vh; Full viewport height */
+  /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%); */
+}
+
+.box-centered {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fff539;
+}

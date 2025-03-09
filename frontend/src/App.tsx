@@ -7,6 +7,8 @@ import theme from "./theme.ts";
 import { useState } from "react";
 import PrivateRoute from "./PrivateRoute.tsx";
 import Dashboard from "./pages/Dashboard.tsx";
+import AdminRoute from "./AdminRoute.tsx";
+import AdminDashboard from "./pages/AdminDashboard.tsx";
 // import Dashboard from "./pages/Dashboard";
 
 function App() {
@@ -26,6 +28,7 @@ function App() {
               </PrivateRoute>
             }
           />
+           <Route path="/admin" element={<AdminRoute><AdminDashboard /></AdminRoute>} />
         </Routes>
       </Router>
     </ThemeProvider>

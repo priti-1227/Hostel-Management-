@@ -44,9 +44,15 @@ function Login({ onLogin }) {
 
       if (response?.token) {
         localStorage.setItem("token", response?.token);
+        localStorage.setItem("role", response.user.role);
         onLogin(response.user);
-        navigate("/dashboard");
+        if (response.user.role === "admin") {
+          navigate("/admin");
+        } else {
+          navigate("/dashboard");
         alert("Login successful!");
+        }
+        
       } else {
         alert(response.message || "Login failed");
       }
